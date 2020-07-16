@@ -85,6 +85,7 @@ end
 println("START")
 println()
 
+#TODO: implement this
 #iterate_valid_boards(N)
 
 
@@ -110,15 +111,25 @@ function time_has_square(board, n)
   #@code_native has_square(board, square_indexes)
 end
 
-time_has_square([false false false false false;
-                 false true  false true  true;
-                 false true  true  true  false;
-                 true  true  false false true;
-                 true  false true  true  true],5)
-time_has_square([true  true  true  true  false true  true;
-                 false true  false false false false false;
-                 false false false true  true  false true;
-                 true  true  false false true  true  false;
-                 false false true  true  true  false false;
-                 true  false true  false true  false true;
-                 false true  true  false false true  true],7)
+solution_5 = [false false false false false;
+              false true  false true  true;
+              false true  true  true  false;
+              true  true  false false true;
+              true  false true  true  true]
+
+solution_7 = [true  true  true  true  false true  true;
+              false true  false false false false false;
+              false false false true  true  false true;
+              true  true  false false true  true  false;
+              false false true  true  true  false false;
+              true  false true  false true  false true;
+              false true  true  false false true  true]
+
+time_has_square(solution_5,5)
+time_has_square(solution_7,7)
+
+#Verify correctness
+#square_indexes_5 = create_square_indexes(5)
+#println(has_square(solution_5, square_indexes_5))
+#square_indexes_7 = create_square_indexes(7)
+#println(has_square(solution_7, square_indexes_7))
